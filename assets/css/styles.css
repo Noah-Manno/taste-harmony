@@ -1,0 +1,62 @@
+:root {
+    --font1: "Roboto Condensed", sans-serif;
+    --font2: "Mate SC", serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #dee0df;
+    font-family: var(--font1);
+}
+
+.body {
+    background: url(../images/tasteharmonybackground.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.header {
+    height: 10vh;
+    font-family: var(--font2);
+}
+
+.title {
+    font-size: 35px;
+}
+
+.subtitle {
+    font-size: 18px;
+}
+
+.navigation {
+    margin-top: 10vh;
+    height: 70vh;
+    background-color: #f8f5ef;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 2px 2px 10px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links {
+    font-size: 30px;
+    font-weight: 400;
+    outline: 1px solid black;
+    padding: 10px 0px;
+    width: 50%;
+    color: black;
+    box-shadow: 2px 2px 10px;
+}
+
+.nav-links:hover {
+    color: gray;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste Harmony</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/recipe.css">
+</head>
+<body>
+<!-- HEADER AND NAVBAR -->
+    <div class="top-bar">
+        <img class="cell small-3 logo" src="./assets/images/tasteharmony_logo.png" alt="taste harmony logo">
+            <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+                <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+              </div>
+              
+            <div class="top-bar" id="example-menu">
+                  <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="has-submenu">
+                      <a class="text-black" href="#0">Recipe Builder</a>
+                      <ul class="submenu menu vertical" data-submenu>
+                        <li><a class="text-black" href="#0">Find a Recipe!</a></li>
+                        <li><a class="text-black" href="#0">Surprise Me!</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="text-black"href="#0">Favorites</a></li>
+                    <li><a class="text-black"href="#0">About Us</a></li>
+                  </ul>
+            </div>
+        </div>
+
+<!-- MAIN FORM -->
+<main class="grid-x">
+    <div class="cell small-12 hook">
+        <h1 class="cell small-3 hook-text">Don't let "hungry" turn into "hangry"!  Our recipe builder is here to answer that infinite question of "what should I make to eat today?"</h1>
+    </div>
+    <div class="cell small-12 grid-x">
+        <div class="include cell small-6">
+            <h2 class="form-title">What ingredients would you like to include?</h3>
+            <input class="include-ingredients" type="text">
+        </div>
+        <div class="no-include small-6">
+            <h2 class="form-title">Don't show me recipes that contain:</h3>
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">Dairy</label><br>
+                <input type="checkbox" id="checkbox2">
+                <label for="checkbox2">Egg</label><br>
+                <input type="checkbox" id="checkbox3">
+                <label for="checkbox3">Gluten</label><br>
+                <input type="checkbox" id="checkbox4">
+                <label for="checkbox4">Grain</label><br>
+                <input type="checkbox" id="checkbox5">
+                <label for="checkbox5">Peanuts</label><br>
+                <input type="checkbox" id="checkbox6">
+                <label for="checkbox6">Seafood</label><br>
+                <input type="checkbox" id="checkbox7">
+                <label for="checkbox7">Sesame</label><br>
+                <input type="checkbox" id="checkbox8">
+                <label for="checkbox8">Shellfish</label><br>
+                <input type="checkbox" id="checkbox9">
+                <label for="checkbox9">Soy</label><br>
+                <input type="checkbox" id="checkbox10">
+                <label for="checkbox10">Sulfites</label><br>
+                <input type="checkbox" id="checkbox11">
+                <label for="checkbox11">Tree Nuts</label><br>
+                <input type="checkbox" id="checkbox12">
+                <label for="checkbox12">Wheat</label><br>
+        </div>
+    </div>
+</main>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script src="./assets/js/recipe.js"></script>
+</body>
+</html>

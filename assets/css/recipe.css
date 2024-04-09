@@ -1,0 +1,93 @@
+:root {
+    --font1: "Open Sans", sans-serif;
+    --lightgreen: #e4edd9;
+    --highlightgreen: #7ed957;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(white, var(--lightgreen));
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.top-bar,
+.menu,
+.top-bar-right {
+    background-color: white !important;
+}
+
+.text-black {
+    color: black;
+    font-family: var(--font1);
+    font-weight: 500;
+}
+
+.dropdown li {
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+.title-bar {
+    background: var(--lightgreen);
+}
+
+.dropdown.menu>li.is-dropdown-submenu-parent>a::after {
+    border-bottom-width: 0;
+    border-color: var(--lightgreen) transparent transparent;
+}
+
+.text-black:hover {
+color: green;
+}
+
+.dropdown.menu>li.is-active>a {
+    color: green;
+}
+
+a:focus {
+    color: darkgreen;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.hook {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    background-image: url(../images/RecipepageBackground.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 900px;
+}
+
+.hook-text {
+    color: black;
+    font-size: 30px;
+    width: 70%;
+}
+
+.form-title {
+    color: black;
+    font-size: 18px;
+}
+
+.include-ingredients {
+    width: 80%;
+    margin-left: 20px;
+}

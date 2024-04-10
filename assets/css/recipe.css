@@ -20,6 +20,11 @@ body {
     margin-left: 10px;
 }
 
+#logo:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+}
+
 .top-bar,
 .menu,
 .top-bar-right {
@@ -69,6 +74,17 @@ main {
     align-items: center;
     text-align: center;
     min-height: 400px;
+    transform: translateX(-500px);
+    animation: slide-in-right ease 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes slide-in-right {
+    from {
+        transform: translateX(-500px)
+    } to {
+        transform: translateX(0px);
+    }
+    
 }
 .plate {
     width: 450px;
@@ -111,11 +127,6 @@ main {
     text-align: center;
 }
 
-.list-title {
-    font-size: 30px;
-    font-weight: 700;
-}
-
 .include-ingredients li{
     text-align: left;
     margin-left: 20%;
@@ -126,4 +137,20 @@ main {
 .card {
     height: 80vh;
     overflow: scroll;
+
+}
+
+.delete-button {
+    border: 1px solid black;
+    float: right;
+}
+.delete-button:hover {
+    cursor: pointer;
+}
+
+.find {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

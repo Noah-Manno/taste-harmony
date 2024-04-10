@@ -14,7 +14,7 @@
 <body>
 <!-- HEADER AND NAVBAR -->
     <div class="top-bar">
-        <img class="cell small-3 logo" src="./assets/images/tasteharmony_logo.png" alt="taste harmony logo">
+        <img class="cell small-3 logo" id="logo" src="./assets/images/tasteharmony_logo.png" alt="taste harmony logo">
             <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
                 <button class="menu-icon" type="button" data-toggle="example-menu"></button>
               </div>
@@ -37,7 +37,7 @@
 
 <main class="grid-x">
   <!-- PAGE TITLE -->
-  <div class="cell small-12 large-4">
+  <div class="cell small-12 large-4 slide-in-right">
     <div class="container">
       <div class="title-container">
         <h1 class="page-title"><span class="highlight">Recipe</span> Builder</h1>
@@ -47,40 +47,32 @@
   </div>
 
 <!-- INGREDIENT CARD -->
-  <div class="cell small-6 large-4 radius bordered shadow card">
+  <div class="cell small-6 large-3 radius bordered shadow card">
     <img src="./assets/images/Ingredients.png">
     <div class="card-section">
       <h1 class="card-title">Ingredients You Have</h1>
       <div>
         <label>What Ingredients Would You Like to Include?
-          <input type="text" placeholder="Ingredient">
+          <input id="ingredientsInput" type="text" placeholder="Ingredient">
         </label>
       </div>
   <div class="submit">
-      <button type="button" class="button radius bordered shadow success">Add!</button>
+      <button type="button" id="add" class="button radius bordered shadow success">Add!</button>
   </div>
     </div>
   </div>
 
 
 <!-- PANTRY -->
-<div class="pantry cell small-6 large-4 card">
+<div class="pantry cell small-6 large-3 large-offset-1 card">
   <div class="card-section">
-      <h1 class="list-title">My Pantry</h1>
+      <h1 class="card-title">My Pantry</h1>
       <ul class="include-ingredients" id="includeIngredients">
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
       </ul>
   </div>
+  <button class="button radius bordered shadow success find" id="find">Find A Recipe!</button>
   <img src="./assets/images/pantry.png">
+ 
 </div>
 
 
@@ -137,5 +129,6 @@
       $(document).foundation();
     </script>
     <script src="./assets/js/recipe.js"></script>
+    <script src="./assets/js/recipeget.js"></script>
 </body>
 </html>

@@ -19,6 +19,11 @@ body {
     margin-left: 10px;
 }
 
+#logo:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+}
+
 .top-bar,
 .menu,
 .top-bar-right {

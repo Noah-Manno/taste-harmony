@@ -18,7 +18,27 @@ function handleFetchRequest(ingredients) {
         }
     });
 
-    fetch(formattedUrl)
+    fetchRecipes(formattedUrl)
+    .then(function(data) {
+        handleUsingData(data);
+    })
+    .catch(function(error) {
+       console.log(error) 
+    })
+}
+
+function fetchRecipes(formattedUrl) {
+    return fetch(formattedUrl)
+    .then(function (response) {
+        if (!response.ok) {
+            throw response.json();
+        }
+        return response.json();
+    })
+}
+
+function handleUsingData(data) {
+
 }
 
 

@@ -7,7 +7,7 @@ function handleGetRecipes() {
 }
 
 function handleFetchRequest(ingredients) {
-    const apiKey = 'e2d8911e91624987ac398bc44a5b3ec4'
+    const apiKey = ''
     let url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=`
     let formattedUrl = url;
     ingredients.forEach((ingredient, index) => {

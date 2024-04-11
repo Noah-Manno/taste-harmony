@@ -1,10 +1,9 @@
-let data = JSON.parse(localStorage.getItem('data'));
+let favorites = handleFavoriteRecipes();
 const results = $('#results')
+const refresh = $('#refresh');
 
-
-
-function handleAddingRecipes(data){
-    data.forEach(recipe => {
+function handleAddingRecipes(favorites){
+    favorites.forEach(recipe => {
     let recipeCard = $('<div class="recipe-card card shadow radius bordered">')
     let container = $('<div>')
     let recipeName = $('<h1>').addClass('recipe-name').attr("id", 'recipe-name').text(recipe.title);
@@ -48,8 +47,6 @@ function handleAddingRecipes(data){
     });
 }
 
-let favorites = handleFavoriteRecipes();
-
 function handleFavoriteRecipes() {
     let favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
     if (!Array.isArray(favorites)) {
@@ -58,5 +55,8 @@ function handleFavoriteRecipes() {
     return favorites
 }
 
+refresh.on('click', function(){
+    location.reload();
+})
 
-handleAddingRecipes(data)
+handleAddingRecipes(favorites)

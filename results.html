@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste Harmony</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/results.css">
+</head>
+<body>
+<!-- HEADER AND NAVBAR -->
+<div class="top-bar">
+    <img class="cell small-3 logo" id="logo" src="./assets/images/tasteharmony_logo.png" alt="taste harmony logo">
+        <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+          </div>
+          
+        <div class="top-bar" id="example-menu">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li class="has-submenu">
+                  <a class="text-black" href="#0">Recipe Builder</a>
+                  <ul class="submenu menu vertical" data-submenu>
+                    <li><a class="text-black" href="./recipe.html">Find a Recipe!</a></li>
+                    <li><a class="text-black" href="#0">Surprise Me!</a></li>
+                  </ul>
+                </li>
+                <li><a class="text-black"href="#0">Favorites</a></li>
+                <li><a class="text-black"href="#0">About Us</a></li>
+              </ul>
+        </div>
+    </div>
+
+
+<main class="grid-x">
+  <!-- PAGE TITLE -->
+  <div class="cell small-12 large-4 slide-in-right left-side">
+    <div class="container">
+      <div class="title-container">
+        <h1 class="page-title"><span class="highlight">Recipe</span> Results</h1>
+      </div>
+      <img class="plate" src="./assets/images/resultsplate.png" alt="plate">
+   </div>
+  </div>
+
+  <div id="results-container" class="results-container small-10 large-6 small-offset-1">
+    <div id="results" class="results">
+        
+        <!-- <div class="recipe-card card shadow radius bordered">
+            <div>
+                <h1 class="recipe-name" id="recipe-name">Recipe Name</h1>
+                <div class="grid-x">
+                    <div class="cell small-6">
+                        <img src="./assets/images/Ingredients.png" alt="">
+                    </div>
+                    <div class="cell small-6 detail-container">
+                        <h2 class="details">Cook Time: 20 minutes</h2>
+                        <h2 class="details">Cuisine: Italian</h2>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+  </div>
+
+</main>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/results.js"></script>
+</body>
+</html>

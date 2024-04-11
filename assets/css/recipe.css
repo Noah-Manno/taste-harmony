@@ -125,6 +125,10 @@ main {
 
 .pantry {
     text-align: center;
+    background: url(../images/pantryBackground.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .include-ingredients li{
@@ -137,6 +141,8 @@ main {
 .card {
     height: 80vh;
     overflow: scroll;
+    border-radius: 36px;
+    box-shadow: 5px 5px 10px;
 
 }
 

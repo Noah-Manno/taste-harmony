@@ -1,31 +1,17 @@
 let data = JSON.parse(localStorage.getItem('data'));
 const results = $('#results')
-const apiKey = ''
-
-function handleGettingInformation (recipe) {
-    infoUrl = `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${apiKey}`
-    return fetch(infoUrl)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        return data;
-    })
-    .catch(error => console.error('Error fetching recipe information:', error));
-}
 
 function handleAddingRecipes(data){
     data.forEach(recipe => {
-    handleGettingInformation(recipe)
-    .then(information => {
         let recipeCard = $('<div class="recipe-card card shadow radius bordered">')
         let container = $('<div>')
-        let recipeName = $('<a>').addClass('recipe-name').attr("id", 'recipe-name').attr('href', information.sourceUrl).text(information.title);
+        let recipeName = $('<h1>').addClass('recipe-name').attr("id", 'recipe-name').text(recipe.title);
         let gridX = $('<div>').addClass('grid-x')
         let cell = $('<div class="cell small-6">')
-        let img = $('<img>').attr('src', information.image)
+        let img = $('<img>').attr('src', recipe.image)
         let detailContainer = $('<div class="cell small-6 detail-container">');
-        let cookTime = $('<h2>').addClass('details').text(`Ready In ${information.readyInMinutes} Minutes`)
-        let cuisine = $('<h2>').addClass('details').text(`Recipe From: ${information.sourceName}`);
+        let cookTime = $('<h2>').addClass('details').text(`Placeholder`)
+        let cuisine = $('<h2>').addClass('details').text(`Placeholder`);
         let starContainer = $('<div>').addClass('star-container');
         let star = $('<img class="favorite-star">').attr('src', './assets/images/outlinestar.png')
         let book = $('<img class="recipe-book">').attr('src', './assets/images/recipebook.png')
@@ -58,9 +44,7 @@ function handleAddingRecipes(data){
                 localStorage.setItem('favoriteRecipes', JSON.stringify(favorites));
             });
         });
-    });
-}
-
+    }
 
 let favorites = handleFavoriteRecipes();
 

@@ -124,6 +124,26 @@ main {
     border-radius: 16px;
 }
 
+.recipe-book,
+.favorite-star {
+    width: 50px;
+    height: auto;
+}
+
+.star-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    font-size: 15px;
+    position: absolute;
+    border-radius: 16px;
+    color: white !important;
+    font-weight: 700;
+    left: 40.5%;
+    top: 50%;
+}
 
 @media only screen and (min-width: 1024px){
     body {
@@ -142,7 +162,13 @@ main {
         max-height: 90vh;
     }
 
-    .left-side {
-
+    .button {
+        font-size: 15px;
+        position: absolute;
+        border-radius: 16px;
+        color: white !important;
+        font-weight: 700;
+        left: 20%;
+        top: 20%;
     }
 }

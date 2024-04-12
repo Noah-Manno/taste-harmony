@@ -134,8 +134,8 @@ main {
 .include-ingredients li{
     text-align: left;
     margin-left: 20%;
-    font-weight: 300;
-    color: var(--highlightgreen);
+    font-weight: 400;
+    color: black;
 }
 
 .card {

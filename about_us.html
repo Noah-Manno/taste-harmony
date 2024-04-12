@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste Harmony</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/recipe.css">
+</head>
+<body>
+    <!-- HEADER AND NAVBAR -->
+<div class="top-bar">
+    <img class="cell small-3 logo" id="logo" src="./assets/images/tasteharmony_logo.png" alt="taste harmony logo">
+        <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+          </div>
+          
+        <div class="top-bar" id="example-menu">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li class="has-submenu">
+                  <a class="text-black" href="#0">Recipe Builder</a>
+                  <ul class="submenu menu vertical" data-submenu>
+                    <li><a class="text-black" href="./recipe.html">Find a Recipe!</a></li>
+                    <li><a class="text-black" href="#0">Surprise Me!</a></li>
+                  </ul>
+                </li>
+                <li><a class="text-black"href="#">Favorites</a></li>
+                <li><a class="text-black"href="#0">About Us</a></li>
+              </ul>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script src="./assets/js/recipe.js"></script>
+    <script src="./assets/js/recipeget.js"></script>
+</body>
+</html>

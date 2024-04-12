@@ -9,11 +9,11 @@ function handleAddingIngredients() {
     // Retrieve the current list of ingredients from local storage
     let ingredients = JSON.parse(localStorage.getItem('ingredients')) || [];
     // Add the new ingredient
-    if (newIngredient !== ""){
-    ingredients.push(newIngredient);
+    if (newIngredient) {
+        ingredients.push(newIngredient);
+        localStorage.setItem('ingredients', JSON.stringify(ingredients));
     }
     handleAddingIngredientsToPantry(ingredients);
-    localStorage.setItem('ingredients', JSON.stringify(ingredients));
 }
 
 $('#includeIngredients').on('click', '.delete-button', function () {
@@ -46,7 +46,7 @@ function handleAddingIngredientsToPantry(ingredients) {
 }
 
 const logo = $('#logo')
-logo.on('click', function() {
+logo.on('click', function () {
     window.location.href = 'index.html'
 })
 

@@ -10,8 +10,6 @@ function handleAddingRecipes(data){
         let cell = $('<div class="cell small-6">')
         let img = $('<img>').attr('src', recipe.image)
         let detailContainer = $('<div class="cell small-6 detail-container">');
-        let cookTime = $('<h2>').addClass('details').text(`Placeholder`)
-        let cuisine = $('<h2>').addClass('details').text(`Placeholder`);
         let starContainer = $('<div>').addClass('star-container');
         let star = $('<img class="favorite-star">').attr('src', './assets/images/outlinestar.png')
         let book = $('<img class="recipe-book">').attr('src', './assets/images/recipebook.png')
@@ -19,8 +17,6 @@ function handleAddingRecipes(data){
     
         starContainer.append(star)
         starContainer.append(book)
-        detailContainer.append(cookTime);
-        detailContainer.append(cuisine);
         detailContainer.append(starContainer)
         cell.append(img);
         gridX.append(cell);
@@ -43,6 +39,15 @@ function handleAddingRecipes(data){
                 }
                 localStorage.setItem('favoriteRecipes', JSON.stringify(favorites));
             });
+
+            book.on('click', function(event) {
+                if (event.target.classList.contains('recipe-book')) {
+                    localStorage.setItem('currentRecipe', recipe.id);
+                    window.location.href = "details.html"
+                }
+            });
+
+
         });
     }
 

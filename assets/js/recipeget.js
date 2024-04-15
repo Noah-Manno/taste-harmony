@@ -1,30 +1,39 @@
 const find = $('#find');
+let noRecipeModal = $('#noRecipeModal');
 find.on('click', handleGetRecipes)
 
 function handleGetRecipes() {
     let ingredients = JSON.parse(localStorage.getItem('ingredients'));
-    handleFetchRequest(ingredients);
+    let allergies = JSON.parse(localStorage.getItem('allergies'));
+    let diets = JSON.parse(localStorage.getItem('diets'));
+    handleFetchRequest(ingredients, allergies, diets);
 }
 
-function handleFetchRequest(ingredients) {
-    const apiKey = ''
-    let url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=`
-    let formattedUrl = url;
-    ingredients.forEach((ingredient, index) => {
-        if (index ===0) {
-            formattedUrl += ingredient
+function handleFetchRequest(ingredients, allergies, diets) {
+        const apiKey = ''
+        let url = `https://api.spoonacular.com/recipes/`
+        if (allergies.length === 0 && diets.length === 0) {
+            url += `findByIngredients?apiKey=${apiKey}&ingredients=${ingredients.join(',')}`
         } else {
-            formattedUrl += `,${ingredient}`
+            url += `complexSearch?apiKey=${apiKey}&includeIngredients=${ingredients.join(',')}&diet=${diets.join(',')}&intolerances=${allergies.join(',')}`
         }
-    });
 
-    fetchRecipes(formattedUrl)
-    .then(function(data) {
-        handleUsingData(data);
-    })
-    .catch(function(error) {
-       console.log(error) 
-    })
+        let formattedUrl = url
+        console.log(formattedUrl)
+
+        fetchRecipes(formattedUrl)
+        .then(function(data) {
+            if (data.totalResults === 0) {
+                noRecipeModal.foundation('open')
+                console.log('no recipes found')
+            } else {
+            localStorage.setItem('data', JSON.stringify(data))
+            window.location.href = 'results.html'
+            }
+        })
+        .catch(function(error) {
+        console.log(error) 
+        })
 }
 
 function fetchRecipes(formattedUrl) {
@@ -36,10 +45,3 @@ function fetchRecipes(formattedUrl) {
         return response.json();
     })
 }
-
-function handleUsingData(data) {
-    localStorage.setItem('data', JSON.stringify(data))
-    window.location.href = 'results.html'
-}
-
-

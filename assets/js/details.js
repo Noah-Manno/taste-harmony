@@ -50,7 +50,7 @@ function handleUsingData (data) {
     let servings = $('<li>').text(`Yields ${data.servings} servings`)
     let readyIn = $('<li>').text(`Ready in ${data.readyInMinutes} Minutes`)
     let caloricValue = $('<li>').text(`${data.nutrition.nutrients[0].amount} Calories`)
-    let protein = $('<li>').text(`${data.nutrition.nutrients[0].amount}${data.nutrition.nutrients[0].unit} Protein`)
+    let protein = $('<li>').text(`${data.nutrition.nutrients[8].amount}${data.nutrition.nutrients[8].unit} Protein`)
 
     leftList.append(servings);
     leftList.append(readyIn);

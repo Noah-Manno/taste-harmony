@@ -38,11 +38,14 @@ then I can add notes and save the recipe for later reference
 
 ## installation
 
-N/A
+You will need your own Spoonacular API Key to test out the full functionality of this webpage.
+https://spoonacular.com/food-api
 
 ## usage
 
-Insert your food preferences into the provided recipe builder form
+Insert your food preferences into the provided recipe builder form.
+Click the Star in order to favorite a recipe.
+Click the Recipe Book for additional information and a link to the recipe
 
 ## credits
 
@@ -53,3 +56,13 @@ Donna Burns
 ## license
 
 Refer to license in repo
+
+## deployment
+
+Github Repo: https://github.com/Noah-Manno/taste-harmony
+
+![Landing Page](./assets/images/Taste%20Harmony%20Landing.png)
+![Recipe Builder](./assets/images/Recipe%20Builder.png)
+![Results Page](./assets/images/Recipe%20Results.png)
+![Details Page](./assets/images/Recipe%20Details.png)
+

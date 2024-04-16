@@ -39,10 +39,6 @@ function handleAddingIngredients() {
         localStorage.setItem('diets', JSON.stringify(diets));
         handleAddingDietsToPantry(diets);
     }
-    if (newMeal) {
-        meals.push(newMeal);
-        localStorage.setItem('meals', JSON.stringify(meals));
-    }
     handleAddingIngredientsToPantry(ingredients);
     handleAddingAllergiesToPantry(allergies);
     handleAddingDietsToPantry(diets);

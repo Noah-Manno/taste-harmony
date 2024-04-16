@@ -1,7 +1,6 @@
 const ingredientsInput = $('#ingredientsInput');
 const allergiesInput = $('#allergies');
 const dietprefsInput = $('#dietprefs');
-const mealtypeInput = $('#mealtype');
 const addButton = $('#add');
 const addAllergy = $('#addAllergy');
 const addDiet = $('#addDiet');
@@ -20,12 +19,10 @@ function handleAddingIngredients() {
     let newIngredient = ingredientsInput.val();
     let newAllergy = allergiesInput.val();
     let newDiet = dietprefsInput.val();
-    let newMeal = mealtypeInput.val();
     // Retrieve the current list of ingredients from local storage
     let ingredients = JSON.parse(localStorage.getItem('ingredients')) || [];
     let allergies = JSON.parse(localStorage.getItem('allergies')) || [];
     let diets = JSON.parse(localStorage.getItem('diets')) || [];
-    let meals = JSON.parse(localStorage.getItem('meals')) || [];
     // Add the new ingredient
     if (newIngredient) {
         ingredients.push(newIngredient);

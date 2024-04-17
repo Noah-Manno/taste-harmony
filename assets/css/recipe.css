@@ -169,3 +169,31 @@ h2 {
     font-weight: 400;
     text-decoration: underline;
 }
+
+h4 {
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.modal-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pizza-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixPantry {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid darkgreen;
+    background-color: var(--lightgreen);
+    cursor: pointer;
+}

@@ -23,6 +23,10 @@ function handleAddingIngredients() {
     let ingredients = JSON.parse(localStorage.getItem('ingredients')) || [];
     let allergies = JSON.parse(localStorage.getItem('allergies')) || [];
     let diets = JSON.parse(localStorage.getItem('diets')) || [];
+    localStorage.setItem(`ingredients`, JSON.stringify(ingredients));
+    localStorage.setItem('allergies', JSON.stringify(allergies));
+    localStorage.setItem('diets', JSON.stringify(diets));
+
     // Add the new ingredient
     if (newIngredient) {
         ingredients.push(newIngredient);

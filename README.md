@@ -38,8 +38,7 @@ then I can add notes and save the recipe for later reference
 
 ## installation
 
-You will need your own Spoonacular API Key to test out the full functionality of this webpage.
-https://spoonacular.com/food-api
+N/A
 
 ## usage
 

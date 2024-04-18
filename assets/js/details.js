@@ -28,7 +28,7 @@ function handleUsingData (data) {
     let details = $('<div class="grid-x details">')
     let nameOfRecipe = $('<div class="name-of-recipe">').text(data.title);
     let imageContainer = $('<div class="cell small-12 medium-6">')
-    let image = $(`<img src=${data.image}>`)
+    let image = $(`<img src=${data.image}>`).attr('alt', data.title);
     let linkContainer = $('<div class="cell small-12 medium-6 side-bar">')
     let link = $(`<a class="recipe-link" href="${data.sourceUrl}">`).text('Full Recipe and Instructions')
     let sourceName = $('<h2 class="source-name">').text(`Recipe By: ${data.sourceName}`)

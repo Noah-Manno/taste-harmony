@@ -36,7 +36,7 @@ const dataRecipes = data.recipes;
     let recipeName = $('<h1>').addClass('recipe-name').attr("id", 'recipe-name').text(recipe.title);
     let gridX = $('<div>').addClass('grid-x')
     let cell = $('<div class="cell small-6">')
-    let img = $('<img>').attr('src', recipe.image)
+    let img = $('<img>').attr('src', recipe.image).attr('alt', recipe.title);
     let detailContainer = $('<div class="cell small-6 detail-container">');
     let starContainer = $('<div>').addClass('star-container');
     let star = $('<img class="favorite-star">').attr('src', './assets/images/outlinestar.png')

@@ -87,7 +87,7 @@ function handleAddingIngredientsToPantry(ingredients) {
         // Create New List Item
         let newItem = $('<li>');
         // Create Delete Button
-        let deleteButton = $('<button>').addClass('delete-button').text('X');
+        let deleteButton = $('<button>').addClass('delete-button').text('Remove');
         // Append Elements
         let newText = $('<span>').text(ingredient)
         newItem.append(newText);
@@ -104,7 +104,7 @@ function handleAddingAllergiesToPantry(allergies) {
         // Create New List Item
         let newItem = $('<li>');
         // Create Delete Button
-        let deleteButton = $('<button>').addClass('delete-button').text('X');
+        let deleteButton = $('<button>').addClass('delete-button').text('Remove');
         // Append Elements
         let newText = $('<span>').text(allergy)
         newItem.append(newText);
@@ -121,7 +121,7 @@ function handleAddingDietsToPantry(diets) {
         // Create New List Item
         let newItem = $('<li>');
         // Create Delete Button
-        let deleteButton = $('<button>').addClass('delete-button').text('X');
+        let deleteButton = $('<button>').addClass('delete-button').text('Remove');
         // Append Elements
         let newText = $('<span>').text(diet)
         newItem.append(newText);

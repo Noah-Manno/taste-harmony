@@ -61,5 +61,9 @@ function handleFavoriteRecipes() {
     return favorites
 }
 
-
+if (Array.isArray(data)) {
 handleAddingRecipes(data)
+} else {
+    let newData = data.results
+    handleAddingRecipes(newData)
+}

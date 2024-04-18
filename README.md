@@ -59,7 +59,7 @@ Refer to license in repo
 ## deployment
 
 Github Repo: https://github.com/Noah-Manno/taste-harmony
-Deplayed Site: https://noah-manno.github.io/taste-harmony/
+Deployed Site: https://noah-manno.github.io/taste-harmony/
 
 ![Landing Page](./assets/images/Taste%20Harmony%20Landing.png)
 ![Recipe Builder](./assets/images/Recipe%20Builder.png)

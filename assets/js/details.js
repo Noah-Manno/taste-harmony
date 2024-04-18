@@ -1,5 +1,5 @@
 let recipeId = localStorage.getItem('currentRecipe')
-const apiKey = ''
+const apiKey = 'e2d8911e91624987ac398bc44a5b3ec4'
 let url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}&includeNutrition=true`
 
 fetchRecipes(url)

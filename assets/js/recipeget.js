@@ -10,7 +10,7 @@ function handleGetRecipes() {
 }
 
 function handleFetchRequest(ingredients, allergies, diets) {
-    const apiKey = ''
+    const apiKey = 'e2d8911e91624987ac398bc44a5b3ec4'
     let url = `https://api.spoonacular.com/recipes/`
     if (allergies.length === 0 && diets.length === 0) {
         url += `findByIngredients?apiKey=${apiKey}&ingredients=${ingredients.join(',')}`

@@ -1,5 +1,5 @@
 let favorites = handleFavoriteRecipes();
-const apiKey = ''
+const apiKey = 'e2d8911e91624987ac398bc44a5b3ec4'
 const refresh = $('#refresh');
 const results = $('#results')
 let url = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=10`
